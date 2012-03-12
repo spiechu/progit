@@ -272,9 +272,9 @@ Teraz uzytkownik `git` moze uzyc polaczenia SSH tylko do wyslania i odebrania re
 
 ## Dostęp Publiczny ##
 
-A co jeżeli zechcesz udostępnić anonimowy dostęp do odczytu swojego projektu? Być może zamiast hostować wewnętrzny proejekt zechcesz utrzymywać projekt open source. Or maybe you have a bunch of automated build servers or continuous integration servers that change a lot, and you don’t want to have to generate SSH keys all the time — you just want to add simple anonymous read access.
+A co jeżeli zechcesz udostępnić anonimowy dostęp do odczytu swojego projektu? Być może zamiast hostować wewnętrzny projekt zechcesz utrzymywać projekt open source. A może masz kilka serwerów automatycznie kompilujących lub ciągle integrujących, które ciągle wprowadzają zmiany i nie chcesz za każdym razem generować kluczy SSH - chcesz dodać prosty, anonimowy dostęp do odczytu.
 
-Probably the simplest way for smaller setups is to run a static web server with its document root where your Git repositories are, and then enable that `post-update` hook we mentioned in the first section of this chapter. Let’s work from the previous example. Say you have your repositories in the `/opt/git` directory, and an Apache server is running on your machine. Again, you can use any web server for this; but as an example, we’ll demonstrate some basic Apache configurations that should give you an idea of what you might need.
+Dla mniejszych układów najprostsze będzie uruchomienie statycznego webserwera, którego głównym katalogiem będzie miejsce, w którym są repozytoria Gita, a następnie włączenie hooka `post-update`, o którym wpominaliśmy w pierwszej sekcji tego rozdziału. Zacznijmy od poprzedniego przykładu. Powiedzmy, że masz swoje repozytoria w katalogu `/opt/git` oraz masz uruchomiony serwer Apache. Możesz oczywiście użyć dowolnego webserwera, my jednak jako przykład użyjemy Apache i jego podstawowych możliwości, co powinno dać ci pojęcie czego możesz potrzebować.
 
 First you need to enable the hook:
 
